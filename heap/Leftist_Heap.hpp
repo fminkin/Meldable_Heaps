@@ -1,4 +1,5 @@
-#pragma once
+#ifndef azaza
+#define azaza
 
 #include"Mergable_Heaps.hpp"
 
