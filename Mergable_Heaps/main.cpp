@@ -2,13 +2,13 @@
 #include<set>
 #include<queue>
 #include"Heap_tests.hpp"
-
 #include<functional>
+
 using namespace std;
 int main(){
 
 
-	Test t(1e3);
+	Test t(1e6);
 	t.test_insert_extract();
 	t.test_melding();
 

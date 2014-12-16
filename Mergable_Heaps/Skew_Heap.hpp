@@ -1,9 +1,8 @@
-#ifndef xxy
-#define xxy
+#pragma once
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_SkewHeap();
-
+//UnmergableHeapsException ex;
 class SkewHeapNode{
 public:
 	SkewHeapNode *left, *right;
@@ -26,4 +25,3 @@ public:
 };
 
 
-#endif

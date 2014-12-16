@@ -1,10 +1,8 @@
-#ifndef _BHEAP_HEADER
-#define _BHEAP_HEADER
-
+#pragma once
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_BHeap();
-
+//UnmergableHeapsException ex;
 class BTree{
 public:
 	BTree *sibling, *child;
@@ -25,4 +23,3 @@ public:
 	BHeap();
 	~BHeap();
 };
-#endif

@@ -1,9 +1,8 @@
-#ifndef xxx
-#define xxx
+#pragma once
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_LeftistHeap();
-
+//UnmergableHeapsException ex;
 class LeftistHeapNode{
 public:
 	LeftistHeapNode *left, *right;
@@ -24,4 +23,3 @@ public:
 	~LeftistHeap();
 };
 
-#endif

@@ -1,10 +1,15 @@
-#ifndef azaza
-#define azaza
-#include<typeinfo>//exception bad_cast
+#pragma once
+#include<exception>
 #include<iostream>
 
 using namespace std;
-bad_cast ex;
+class UnmergableHeapsException : public std::exception {
+public:
+	virtual const char* what() const throw(){
+		return "Attempt to merge two unmergable heaps\n";
+	}
+};
+
 enum list_of_heaps{
 	MH_BHEAP,
 	MH_LEFTIST,
@@ -24,4 +29,3 @@ public:
 
 IHeap* create_mergable_heap(list_of_heaps a);
 
-#endif

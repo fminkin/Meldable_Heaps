@@ -1,7 +1,8 @@
 #include"Leftist_Heap.hpp"
-#include<typeinfo>
+
 
 using namespace std;
+
 
 IHeap* return_LeftistHeap(){
 	return new LeftistHeap();
@@ -51,8 +52,7 @@ void LeftistHeap::insert(const int key){
 
 void LeftistHeap::meld(IHeap *casting_heap){
 	if (dynamic_cast<LeftistHeap *> (casting_heap) == NULL && casting_heap != 0)
-		throw ex;
-
+		throw UnmergableHeapsException();
 
 	LeftistHeap *new_heap = dynamic_cast<LeftistHeap *>(casting_heap);
 	if (!root){

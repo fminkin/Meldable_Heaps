@@ -1,6 +1,5 @@
-
 #include"Binomial_Heap.hpp"
-#include<typeinfo>
+
 
 using namespace std;
 
@@ -117,7 +116,7 @@ void BHeap::merge(BHeap *a){ // making a new root list from last and additional 
 
 void BHeap::meld(IHeap *casting_heap){
 	if (dynamic_cast<BHeap *> (casting_heap) == NULL && casting_heap != 0)
-		throw ex;
+		throw UnmergableHeapsException();
 	BHeap *new_heap = dynamic_cast<BHeap *> (casting_heap);
 	merge(new_heap); // make new 
 	BTree *x, *next_x, *prev_x;

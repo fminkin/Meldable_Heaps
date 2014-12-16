@@ -1,5 +1,5 @@
 #include"Skew_Heap.hpp"
-#include<typeinfo>
+
 using namespace std;
 
 
@@ -38,7 +38,7 @@ void SkewHeap::insert(const int key){
 
 void SkewHeap::meld(IHeap *casting_heap){
 	if (dynamic_cast<SkewHeap *>(casting_heap) == NULL && casting_heap != 0)
-		throw ex;
+		throw UnmergableHeapsException();
 
 	SkewHeap *new_heap = dynamic_cast<SkewHeap *>(casting_heap);
 	if (!root){ // rank = 0, if node is equal to NULL
