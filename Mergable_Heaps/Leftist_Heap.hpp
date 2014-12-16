@@ -2,7 +2,7 @@
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_LeftistHeap();
-//UnmergableHeapsException ex;
+
 class LeftistHeapNode{
 public:
 	LeftistHeapNode *left, *right;

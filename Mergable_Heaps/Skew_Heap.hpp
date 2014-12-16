@@ -2,7 +2,7 @@
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_SkewHeap();
-//UnmergableHeapsException ex;
+
 class SkewHeapNode{
 public:
 	SkewHeapNode *left, *right;

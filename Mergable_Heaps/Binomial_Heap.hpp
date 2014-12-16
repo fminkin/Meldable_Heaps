@@ -2,7 +2,7 @@
 #include"Mergable_Heaps.hpp"
 
 IHeap* return_BHeap();
-//UnmergableHeapsException ex;
+
 class BTree{
 public:
 	BTree *sibling, *child;
