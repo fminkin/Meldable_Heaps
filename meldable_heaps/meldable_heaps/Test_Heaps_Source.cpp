@@ -70,8 +70,8 @@ void Test::test_melding(){
 				test_vector[j + 1] = test_vector[test_vector.size() - 1];
 				test_vector.pop_back();
 			}
-			catch (bad_cast){
-				cout << "attempt to merge 2 unmergable heaps\n";
+			catch (UnmergableHeapsException& e){
+				cout << e.what() << endl;
 				break;
 			}
 		}
@@ -95,22 +95,18 @@ void Test::usual_insert(cases a){
 		time = clock();
 		for (size_t j = 0; j < size; j++){
 			switch (a){
-			case IN_MAX:{
-							heaps[i]->insert(size - j);
-							break;
-			}
-			case IN_MIN:{
-							heaps[i]->insert(j + 1);
-							break;
-			}
-			case IN_SHUFFLE:{
-								heaps[i]->insert(shuffle[j]);
-								break;
-			}
-			default:{
-						heaps[i]->insert(j + 1);
-						break;
-			}
+			case IN_MAX:
+				heaps[i]->insert(size - j);
+				break;
+			case IN_MIN:
+				heaps[i]->insert(j + 1);
+				break;
+			case IN_SHUFFLE:
+				heaps[i]->insert(shuffle[j]);
+				break;
+			default:
+				heaps[i]->insert(j + 1);
+				break;
 			}
 		}
 		time = clock() - time;
